@@ -157,6 +157,14 @@ describe('Can import fizzbuzz', function () {
         ).to.be.a('function');
 
       });
+      it('"play" logs a string/game to logger', function(){
+        output = '';
+        fizzbuzz.play();
+        expect(
+          output
+        ).to.be.a('string').and.lengthOf.greaterThan(0);
+
+      });
     });
 
 
