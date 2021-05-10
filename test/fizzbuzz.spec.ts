@@ -18,5 +18,12 @@ describe('Can import fizzbuzz', function () {
         fizzbuzz.whatToSay
       ).to.be.a('function');
     });
+
+    it('1 becomes 1', function(){
+      expect(
+        fizzbuzz.whatToSay(1)
+      ).to.be('1');
+    });
+
   });
 });
