@@ -3,8 +3,8 @@
 export default class Fizzbuzz {
 
 
-  whatToSay():boolean {
-    return true;
+  whatToSay(number:number):string {
+    return '1';
   }
 
 }
