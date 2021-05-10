@@ -125,7 +125,7 @@ describe('Can import fizzbuzz', function () {
         for(let turn = randomStartingNumber; turn < randomStartingNumber + 100; turn++) {
           expect(
             fizzbuzz.whatToSay(turn)
-          ).to.be.oneOf([turn, 'Fizz', 'Buzz', 'FizzBuzz']);
+          ).to.be.oneOf([turn.toString(), 'Fizz', 'Buzz', 'FizzBuzz']);
         }
       });
     });
