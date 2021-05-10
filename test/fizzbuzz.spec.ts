@@ -53,7 +53,16 @@ describe('Can import fizzbuzz', function () {
       ).to.be.equal('Buzz');
     });
 
+    it('Three numbers in a row should only produce only one result starting with Fizz. Random starting number', function(){
+      const startingNumber = Math.floor(Math.random() * 100) + 1;
+      let fizzCount = 0;
+      for(let count = 0; count < 3; count++) 
+        fizzCount += fizzbuzz.whatToSay(startingNumber + count).startsWith('Fizz') ? 1 : 0;
 
+      expect(
+        fizzCount
+      ).to.be.equal(1);
+    });
 
   });
 });
