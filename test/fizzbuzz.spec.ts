@@ -117,6 +117,19 @@ describe('Can import fizzbuzz', function () {
         }
       });
 
+      it('Any five numbers n, n+5, n+10, n+15, n+20 should all or none end with Buzz. Start @ 1', function(){
+        const randomStartingNumber = 1;
+        for(let startingNumber = randomStartingNumber; startingNumber < randomStartingNumber + 100; startingNumber++) {
+          let fizzCount = 0;
+          for(let count = 0; count < 5; count++) 
+            fizzCount += fizzbuzz.whatToSay(startingNumber + (count * 5)).endsWith('Buzz') ? 1 : 0;
+          expect(
+            fizzCount
+          ).to.be.oneOf([0, 5]);
+        }
+      });
+
+
     });
 
     describe('Numbers', function () {
