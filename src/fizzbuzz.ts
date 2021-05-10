@@ -18,7 +18,6 @@ export default class Fizzbuzz {
     case 10: return 'Buzz'; break;
     case 5: return 'Buzz'; break;
     case 3: return 'Fizz'; break;
-    case 2: return '2'; break;
     default: return turn.toString();
     }
   }
