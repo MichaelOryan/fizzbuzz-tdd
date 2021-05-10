@@ -5,5 +5,10 @@ import Fizzbuzz from './../src/fizzbuzz';
 
 
 describe('Can import fizzbuzz', function () {
-  const fizzbuzz = new Fizzbuzz();
+  let fizzbuzz:Fizzbuzz;
+  it('Can create fizzbuzz class instance', function(){
+    expect(
+      fizzbuzz instanceof Fizzbuzz
+    ).to.be.equal(true);
+  });
 });
