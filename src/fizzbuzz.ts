@@ -25,7 +25,8 @@ export default class Fizzbuzz {
   }
 
   play():void {
-    this.logger(' ');
+    for(let i = 1; i < 100; i++)
+      this.logger(' \n');
   }
 
 }
