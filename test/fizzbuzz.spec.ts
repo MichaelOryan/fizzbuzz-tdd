@@ -3,7 +3,6 @@ import mocha from 'mocha';
 
 import Fizzbuzz from './../src/fizzbuzz';
 
-
 describe('Can import fizzbuzz', function () {
   const fizzbuzz:Fizzbuzz = new Fizzbuzz();
   it('Can create fizzbuzz class instance', function(){
@@ -36,6 +35,18 @@ describe('Can import fizzbuzz', function () {
         fizzbuzz.whatToSay(3)
       ).to.be.equal('Fizz');
     });
+
+    it('Three numbers in a row should only produce only one result starting with Fizz', function(){
+      const startingNumber = 4;
+      let fizzCount = 0;
+      for(let count = 0; count < 3; count++) 
+        fizzCount += fizzbuzz.whatToSay(startingNumber + count).startsWith('Fizz') ? 1 : 0;
+
+      expect(
+        fizzCount
+      ).to.be.equal(1);
+    });
+
 
   });
 });
