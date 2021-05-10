@@ -25,7 +25,7 @@ export default class Fizzbuzz {
   }
 
   play():void {
-    return;
+    this.logger(' ');
   }
 
 }
