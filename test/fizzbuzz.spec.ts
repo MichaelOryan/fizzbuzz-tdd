@@ -176,6 +176,16 @@ describe('Can import fizzbuzz', function () {
 
       });
 
+      it('Each logged line is an integer, Fizz, Buzz or FizzBuzz', function(){
+        output = '';
+        fizzbuzz.play();
+        expect(
+          output.split('\n').filter(line => ['Fizz', 'Buzz', 'FizzBuzz'].includes(line) || Number.isInteger(line))
+        ).to.be.an('array').and.lengthOf(100);
+
+      });
+
+
     });
 
 
