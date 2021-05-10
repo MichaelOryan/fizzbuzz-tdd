@@ -148,7 +148,7 @@ describe('Can import fizzbuzz', function () {
   describe('Console output tests', function () {
     describe('Can give parameter to constructor', function () {
       let output = '';
-      const log = (message?: any, ...optionalParams: any[]) => output = message;
+      const log = (message?: any, ...optionalParams: any[]) => output += message;
       const fizzbuzz = new Fizzbuzz(log);
 
       it('"play" function to play game"', function(){
