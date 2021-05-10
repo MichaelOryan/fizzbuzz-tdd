@@ -7,7 +7,7 @@ export default class Fizzbuzz {
     whatToSay(turn:number):string {
       this.counter++;
         
-      if(this.counter === 6)
+      if(this.counter % 3 === 0)
         return 'Fizz';
 
       switch(turn) {
