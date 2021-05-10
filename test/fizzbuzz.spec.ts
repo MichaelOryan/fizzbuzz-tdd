@@ -149,7 +149,7 @@ describe('Can import fizzbuzz', function () {
     describe('Can give parameter to constructor', function () {
       let output = '';
       const log = (message?: any, ...optionalParams: any[]) => output = message;
-      fizzbuzz(log);
+      const fizzbuzz = new Fizzbuzz(log);
     });
   });
 });
