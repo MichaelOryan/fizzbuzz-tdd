@@ -2,6 +2,12 @@
 
 export default class Fizzbuzz {
 
+  logger:LoggerFunction;
+
+  constructor(logger:LoggerFunction = console.log) {
+    this.logger = logger;
+  }
+
   whatToSay(turn:number):string {
 
     let answer = '';
@@ -19,3 +25,5 @@ export default class Fizzbuzz {
   }
 
 }
+
+type LoggerFunction = (message?: any, ...optionalParams: any[]) => void
