@@ -22,7 +22,7 @@ describe('Can import fizzbuzz', function () {
     it('1 becomes 1', function(){
       expect(
         fizzbuzz.whatToSay(1)
-      ).to.be('1');
+      ).to.be.equal('1');
     });
 
   });
