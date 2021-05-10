@@ -12,9 +12,10 @@ export default class Fizzbuzz {
     if(turn % 5 === 0)
       answer += 'Buzz';
 
-    if(answer !== '') return answer;
+    if(answer === '') 
+      answer = turn.toString();
 
-    return turn.toString();
+    return answer;
   }
 
 }
