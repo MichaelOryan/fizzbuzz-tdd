@@ -119,5 +119,16 @@ describe('Can import fizzbuzz', function () {
 
     });
 
+    describe('Numbers', function () {
+      it('Anything that is not Fizz, Buzz or FizzBuzz should be the same as the number inputed. Identity', function(){
+        const randomStartingNumber = Math.floor(Math.random() * 100) + 10;
+        for(let turn = randomStartingNumber; turn < randomStartingNumber + 100; turn++) {
+          expect(
+            fizzbuzz.whatToSay(turn)
+          ).to.be.oneOf([turn, 'Fizz', 'Buzz', 'FizzBuzz']);
+        }
+      });
+    });
+
   });
 });
