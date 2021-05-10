@@ -14,9 +14,7 @@ export default class Fizzbuzz {
 
     if(answer !== '') return answer;
 
-    switch(turn) {
-    default: return turn.toString();
-    }
+    return turn.toString();
   }
 
 }
