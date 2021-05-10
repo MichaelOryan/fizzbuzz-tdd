@@ -5,5 +5,5 @@ import Fizzbuzz from './../src/fizzbuzz';
 
 
 describe('Can import fizzbuzz', function () {
-  const Fizzbuzz = new Fizzbuzz();
+  const fizzbuzz = new Fizzbuzz();
 });
