@@ -94,7 +94,7 @@ describe('Can import fizzbuzz', function () {
       });
 
       it('Five numbers in a row should only produce only one result ending with Buzz', function(){
-        const startingNumber = 4;
+        const startingNumber = 6;
         let fizzCount = 0;
         for(let count = 0; count < 5; count++) 
           fizzCount += fizzbuzz.whatToSay(startingNumber + count).endsWith('Buzz') ? 1 : 0;
