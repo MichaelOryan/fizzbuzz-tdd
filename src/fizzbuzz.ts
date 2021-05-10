@@ -24,6 +24,10 @@ export default class Fizzbuzz {
     return answer;
   }
 
+  play():void {
+    return;
+  }
+
 }
 
 type LoggerFunction = (message?: any, ...optionalParams: any[]) => void
