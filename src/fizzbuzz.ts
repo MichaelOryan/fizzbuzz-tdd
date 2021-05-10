@@ -4,8 +4,15 @@ export default class Fizzbuzz {
 
   whatToSay(turn:number):string {
 
+    let answer = '';
+    
     if(turn > 3 && turn % 3 === 0)
-      return 'Fizz';
+      answer += 'Fizz';
+
+    if(turn > 10 && turn % 5 === 1)
+      answer += 'Buzz';
+
+    if(answer !== '') return answer;
 
     switch(turn) {
     case 10: return 'Buzz'; break;
