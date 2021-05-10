@@ -157,6 +157,7 @@ describe('Can import fizzbuzz', function () {
         ).to.be.a('function');
 
       });
+
       it('"play" logs a string/game to logger', function(){
         output = '';
         fizzbuzz.play();
@@ -165,6 +166,16 @@ describe('Can import fizzbuzz', function () {
         ).to.be.a('string').and.lengthOf.greaterThan(0);
 
       });
+
+      it('"play" logs 100 lines/turns to logger', function(){
+        output = '';
+        fizzbuzz.play();
+        expect(
+          output.split('\n')
+        ).to.be.an('array').and.lengthOf(100);
+
+      });
+
     });
 
 
