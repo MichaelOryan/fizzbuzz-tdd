@@ -150,6 +150,15 @@ describe('Can import fizzbuzz', function () {
       let output = '';
       const log = (message?: any, ...optionalParams: any[]) => output = message;
       const fizzbuzz = new Fizzbuzz(log);
+
+      it('"play" function to play game"', function(){
+        expect(
+          fizzbuzz.play
+        ).to.be.a('function');
+
+      });
     });
+
+
   });
 });
