@@ -3,8 +3,11 @@
 export default class Fizzbuzz {
 
 
-  whatToSay(number:number):string {
-    return '1';
+  whatToSay(turn:number):string {
+    switch(turn) {
+    case 2: return '2'; break;
+    default: return '1';
+    }
   }
 
 }
