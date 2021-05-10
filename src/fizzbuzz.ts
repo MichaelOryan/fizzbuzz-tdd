@@ -5,7 +5,7 @@ export default class Fizzbuzz {
   whatToSay(turn:number):string {
 
     let answer = '';
-    
+
     if(turn > 3 && turn % 3 === 0)
       answer += 'Fizz';
 
@@ -19,7 +19,7 @@ export default class Fizzbuzz {
     case 5: return 'Buzz'; break;
     case 3: return 'Fizz'; break;
     case 2: return '2'; break;
-    default: return '1';
+    default: return turn.toString();
     }
   }
 
