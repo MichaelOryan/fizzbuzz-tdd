@@ -25,5 +25,11 @@ describe('Can import fizzbuzz', function () {
       ).to.be.equal('1');
     });
 
+    it('2 becomes 2', function(){
+      expect(
+        fizzbuzz.whatToSay(2)
+      ).to.be.equal('2');
+    });
+
   });
 });
