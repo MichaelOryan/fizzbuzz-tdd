@@ -47,6 +47,13 @@ describe('Can import fizzbuzz', function () {
       ).to.be.equal(1);
     });
 
+    it('5 becomes Buzz', function(){
+      expect(
+        fizzbuzz.whatToSay(5)
+      ).to.be.equal('Buzz');
+    });
+
+
 
   });
 });
