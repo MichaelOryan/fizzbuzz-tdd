@@ -6,7 +6,7 @@ export default class Fizzbuzz {
 
     let answer = '';
 
-    if(turn > 3 && turn % 3 === 0)
+    if(turn % 3 === 0)
       answer += 'Fizz';
 
     if(turn > 10 && turn % 5 === 0)
@@ -17,7 +17,6 @@ export default class Fizzbuzz {
     switch(turn) {
     case 10: return 'Buzz'; break;
     case 5: return 'Buzz'; break;
-    case 3: return 'Fizz'; break;
     default: return turn.toString();
     }
   }
