@@ -104,6 +104,16 @@ describe('Can import fizzbuzz', function () {
         ).to.be.equal(1);
       });
 
+      it('Five numbers in a row should only produce only one result ending with Buzz. Random starting number', function(){
+        const startingNumber = Math.floor(Math.random() * 100) + 10;
+        let fizzCount = 0;
+        for(let count = 0; count < 5; count++) 
+          fizzCount += fizzbuzz.whatToSay(startingNumber + count).endsWith('Buzz') ? 1 : 0;
+
+        expect(
+          fizzCount
+        ).to.be.equal(1);
+      });
 
     });
 
