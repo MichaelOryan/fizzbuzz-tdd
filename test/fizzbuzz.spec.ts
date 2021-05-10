@@ -85,13 +85,25 @@ describe('Can import fizzbuzz', function () {
         }
       });
     });
-    
+
     describe('Buzz', function () {
       it('5 becomes Buzz', function(){
         expect(
           fizzbuzz.whatToSay(5)
         ).to.be.equal('Buzz');
       });
+
+      it('Five numbers in a row should only produce only one result ending with Buzz', function(){
+        const startingNumber = 4;
+        let fizzCount = 0;
+        for(let count = 0; count < 5; count++) 
+          fizzCount += fizzbuzz.whatToSay(startingNumber + count).endsWith('Buzz') ? 1 : 0;
+
+        expect(
+          fizzCount
+        ).to.be.equal(1);
+      });
+
 
     });
 
