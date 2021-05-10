@@ -77,6 +77,17 @@ describe('Can import fizzbuzz', function () {
       }
     });
 
+    it('Any three numbers n, n+3, n+6 should all or none start with Fizz. Start @ 1', function(){
+      const randomStartingNumber = 1;
+      for(let startingNumber = randomStartingNumber; startingNumber < randomStartingNumber + 20; startingNumber++) {
+        let fizzCount = 0;
+        for(let count = 0; count < 3; count++) 
+          fizzCount += fizzbuzz.whatToSay(startingNumber + (count * 3)).startsWith('Fizz') ? 1 : 0;
+        expect(
+          fizzCount
+        ).to.be.oneOf([0, 3]);  
+      }
+    });
 
   });
 });
