@@ -9,7 +9,7 @@ export default class Fizzbuzz {
     if(turn > 3 && turn % 3 === 0)
       answer += 'Fizz';
 
-    if(turn > 10 && turn % 5 === 1)
+    if(turn > 10 && turn % 5 === 0)
       answer += 'Buzz';
 
     if(answer !== '') return answer;
