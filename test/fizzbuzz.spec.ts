@@ -182,9 +182,16 @@ describe('Can import fizzbuzz', function () {
         expect(
           output.split('\n').filter(line => ['Fizz', 'Buzz', 'FizzBuzz'].includes(line) || Number.isInteger(line))
         ).to.be.an('array').and.lengthOf(100);
-
       });
 
+      it('Each line should match whatToSay(turn) (turn = index + 1). ie; is the correct answer for the turn', function(){
+        output = '';
+        fizzbuzz.play();
+        console.log(output);
+        expect(
+          output.split('\n').filter((line, index) => fizzbuzz.whatToSay(index + 1) === line)
+        ).to.be.an('array').and.lengthOf(100);
+      });
 
     });
 
