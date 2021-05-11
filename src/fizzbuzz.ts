@@ -26,7 +26,8 @@ export default class Fizzbuzz {
 
   play():void {
     for(let i = 1; i < 100; i++)
-      this.logger(' \n');
+      this.logger('Fizz\n');
+    this.logger('Fizz');
   }
 
 }
