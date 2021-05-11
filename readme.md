@@ -58,3 +58,12 @@ Use property that if something is not Fizz, Buzz or FizzBuzz then the returned v
 Similar tests could also be added for 15 and "FizzBuzz" so that something like "FizzPurpleMonkeyDishwasherBuzz" is an invalid response.
 
 However mod 15 is currently covered by beginning with Fizz for mod 3, ending with Buzz for mod 5 and the number identity test which states that the only valid responses are the identity, Fizz, Buzz or FizzBuzz.
+
+
+For testing of the whole game a logging function is passed in the constructor which can then be used to get the results of playing.
+
+This is then tested against expected results from the game.
+First some response.
+Then 100 turns.
+Then each turn is a possibly valid result. any number, fizz, buzz, fizzbuzz
+Each turn is a correct response for the turn.
