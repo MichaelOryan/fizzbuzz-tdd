@@ -1,3 +1,3 @@
 import Fizzbuzz from './fizzbuzz';
 
-new Fizzbuzz().play();
+new Fizzbuzz(console.log).play();
